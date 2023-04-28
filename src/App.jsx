@@ -1,7 +1,12 @@
+import { Todo } from './components/Todo/Todo';
 import './styles/index.scss';
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Todo />
+    </>
+  );
 }
 
 export default App;

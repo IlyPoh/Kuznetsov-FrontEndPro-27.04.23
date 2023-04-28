@@ -1,0 +1,41 @@
+@import '/src/styles/base/variables';
+.btn {
+  padding: 0.5rem 1.25rem;
+  text-transform: uppercase;
+
+  transition: background $defaultTransition, color $defaultTransition,
+    border $defaultTransition;
+}
+
+.completed {
+  background: $color-green;
+  border: 1px solid $color-green;
+  color: $color-white;
+
+  &:hover {
+    background: $color-dark-green;
+    border-color: $color-dark-green;
+  }
+}
+
+.remove {
+  background: $color-red;
+  border: 1px solid $color-red;
+  color: $color-white;
+
+  &:hover {
+    border-color: $color-dark-red;
+    background: $color-dark-red;
+  }
+}
+
+.transparent {
+  background: none;
+  border: 1px solid $color-white;
+  color: $color-white;
+
+  &:hover {
+    background: $color-white;
+    color: $color-black;
+  }
+}
