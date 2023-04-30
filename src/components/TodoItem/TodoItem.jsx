@@ -9,6 +9,7 @@ export const TodoItem = ({ todo }) => {
   const handleToggleTodo = (id) => {
     dispatch(toggleTodo(id));
   };
+
   const handleDeleteTodo = (id) => {
     dispatch(deleteTodo(id));
   };

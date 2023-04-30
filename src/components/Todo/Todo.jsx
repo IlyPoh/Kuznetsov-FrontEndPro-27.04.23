@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 // components
 import { TodoForm } from '../TodoForm/TodoForm';
 import { TodoList } from '../TodoList/TodoList';
