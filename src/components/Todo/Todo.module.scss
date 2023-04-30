@@ -1,10 +1,12 @@
 @import '/src/styles/base/variables.scss';
+
 .todo {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .todo-body {
   max-width: 500px;
   width: 100%;
