@@ -2,11 +2,7 @@ import { Todo } from './components/Todo/Todo';
 import './styles/index.scss';
 
 function App() {
-  return (
-    <>
-      <Todo />
-    </>
-  );
+  return <Todo />;
 }
 
 export default App;
