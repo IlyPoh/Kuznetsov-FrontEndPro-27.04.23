@@ -10,7 +10,6 @@ export const TodoList = () => {
       <div className={style['todo-list']}>
         {todos.length ? (
           todos.map((todo) => {
-            console.log(todos);
             return <TodoItem key={todo.id} todo={todo} />;
           })
         ) : (
