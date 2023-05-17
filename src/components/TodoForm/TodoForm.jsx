@@ -1,13 +1,18 @@
-// components
-// import { useState } from 'react';
+// modules
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addTodo } from '../../store/actions/todo';
+
+// components
 import { Button } from '../Button/Button';
 
 // style
 import style from './TodoForm.module.scss';
 
-export const TodoForm = ({ todos, addTodo }) => {
+export const TodoForm = () => {
+  const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState('');
+  const todos = useSelector((state) => state.todos.todos);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -21,7 +26,7 @@ export const TodoForm = ({ todos, addTodo }) => {
       text: inputValue,
       completed: false,
     };
-    addTodo(newTodo);
+    dispatch(addTodo(newTodo));
     setInputValue('');
   };
 

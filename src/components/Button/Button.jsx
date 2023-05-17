@@ -5,7 +5,7 @@ export function Button({ text, onClick, className, ...props }) {
     <>
       <button
         {...props}
-        className={`${style.btn} ${style[className]}`}
+        className={`${style['btn']} ${style[className]}`}
         onClick={onClick}
       >
         {text}

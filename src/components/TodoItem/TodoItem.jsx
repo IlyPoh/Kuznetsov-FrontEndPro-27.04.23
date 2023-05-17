@@ -1,7 +1,19 @@
+import { useDispatch } from 'react-redux';
+import { deleteTodo, toggleTodo } from '../../store/actions/todo';
 import { Button } from '../Button/Button';
 import style from './TodoItem.module.scss';
 
-export const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
+export const TodoItem = ({ todo }) => {
+  const dispatch = useDispatch();
+
+  const handleToggleTodo = (id) => {
+    dispatch(toggleTodo(id));
+  };
+
+  const handleDeleteTodo = (id) => {
+    dispatch(deleteTodo(id));
+  };
+
   return (
     <div
       className={`${style['todo-item']} ${
@@ -11,12 +23,12 @@ export const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
       <span className={style['todo-item-text']}>{todo.text}</span>
       <div className={style['buttons']}>
         <Button
-          onClick={() => toggleTodo(todo.id)}
+          onClick={() => handleToggleTodo(todo.id)}
           text={todo.completed ? 'Completed' : 'Complete'}
           className="completed"
         />
         <Button
-          onClick={() => deleteTodo(todo.id)}
+          onClick={() => handleDeleteTodo(todo.id)}
           text="Delete"
           className="remove"
         />
