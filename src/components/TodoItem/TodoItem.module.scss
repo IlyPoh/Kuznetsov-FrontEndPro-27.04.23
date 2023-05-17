@@ -1,0 +1,27 @@
+@import '/src/styles/base/variables';
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  transition: background $defaultTransition;
+}
+
+.completed {
+  background: $color-shadow-green;
+
+  span {
+    text-decoration: line-through;
+  }
+}
+
+.input {
+  margin-right: 0.5rem;
+}
+
+.buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
